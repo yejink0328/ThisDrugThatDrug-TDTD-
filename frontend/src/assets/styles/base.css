@@ -99,3 +99,60 @@ p, h1, h2, h3, .med-name, .caption, .empty, button {
   color: var(--body);
 }
 .icon-button:hover { background: var(--p50); }
+
+@media (max-width: 560px) {
+  h1 { font-size: 26px; line-height: 36px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 판정 단계별 색상 변수 (LevelTag, ResultSummary, PairCard가 함께 사용) */
+.dg {
+  --level: var(--danger);
+  --light: var(--danger-light);
+  --text: var(--danger-text);
+}
+.wn {
+  --level: var(--warning);
+  --light: var(--warning-light);
+  --text: var(--warning-text);
+}
+.ca {
+  --level: var(--caution);
+  --light: var(--caution-light);
+  --text: var(--caution-text);
+}
+.ok {
+  --level: var(--success);
+  --light: var(--success-light);
+  --text: var(--success-text);
+}
+
+/* 등록 화면과 결과·저장 화면이 함께 쓰는 스타일 */
+.lead { margin-top: 8px; color: var(--secondary); }
+.page-title { margin-top: 32px; }
+
+.panel {
+  min-width: 0;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.med-name { font-weight: 500; color: var(--ink); }
+
+.empty {
+  padding: 16px;
+  border: 1px dashed var(--border);
+  text-align: center;
+  color: var(--secondary);
+}
+
+@media (max-width: 560px) {
+  .panel { padding: 16px; }
+}
